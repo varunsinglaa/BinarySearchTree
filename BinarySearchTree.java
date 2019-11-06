@@ -1,5 +1,5 @@
 import java.util.*;
-	public class Tree
+	public class BinarySearchTree
 	 {
 	   static class Node
 	  {
@@ -12,11 +12,10 @@ import java.util.*;
 	       }
 	}
 	Node root;
-    
-        Tree()
-         {  
-            root = null;  
-         }
+    BinarySearchTree()
+ {  
+        root = null;  
+    }
 	void insert(int data)
 	{
 	  root = insertRec(root, data);
@@ -36,7 +35,7 @@ import java.util.*;
 	        return root; 
 	    } 
 
-	void inorder(int data)
+	void inorder()
 	{
 
 
@@ -55,8 +54,17 @@ import java.util.*;
 	}
 	public static void main(String [] args)
 	{
-	Tree bst = new Tree();
-	Node root = new Node(5);
+		BinarySearchTree b=new BinarySearchTree();
+	    b.insert(60);
+	        b.insert(20);
+	        b.insert(10);
+	        b.insert(40);
+	        b.insert(70);
+	        b.insert(60);
+	        b.insert(80);
+	        b.inorder();
+	        b.preorder();
+	        b.postorder();
 	}
 	}
 
